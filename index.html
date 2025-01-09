@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un guide complet pour créer un site web avec HTML et CSS.">
+    <meta name="author" content="Votre Nom">
+    <title>BuildInHtml</title>
+
+    <!-- Lien vers le favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .code-example {
+            background-color: #282c34;
+            color: #61dafb;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .note {
+            background-color: #ffeb3b;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .example-box {
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .menu-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .menu-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .interactive-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .interactive-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Créer un Site Web Complet en HTML</h1>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#images">Ajouter une Image</a>
+            <a href="#forms">Formulaires</a>
+            <a href="#tables">Tables</a>
+            <a href="#links">Liens</a>
+            <a href="#video">Vidéo</a>
+            <a href="#footer">Footer</a>
+            <a href="#buttons">Boutons Interactifs</a>
+            <a href="#dropdown">Menus Déroulants</a>
+            <a href="#icons">Icônes</a>
+            <a href="#javascript">JavaScript</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Introduction -->
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>Bienvenue dans ce guide complet pour apprendre à créer un site web en HTML et CSS ! Ce guide couvre les bases et quelques techniques avancées pour vous aider à créer des pages web modernes et interactives.</p>
+        </section>
+
+        <!-- Ajouter une Image -->
+        <section id="images">
+            <h2>Ajouter une Image</h2>
+            <p>Pour ajouter une image, on utilise la balise <code>&lt;img&gt;</code>. Voici un exemple :</p>
+
+            <div class="code-example">
+                <p>&lt;img src="image.jpg" alt="Une belle image" width="600" height="400"&gt;</p>
+            </div>
+
+            <p>Voici une image d'exemple :</p>
+            <div class="example-box">
+                <img src="https://via.placeholder.com/600x400" alt="Exemple d'image" width="600" height="400">
+            </div>
+        </section>
+
+        <!-- Formulaires -->
+        <section id="forms">
+            <h2>Ajouter un Formulaire</h2>
+            <p>Les formulaires permettent de recueillir des informations auprès des utilisateurs. Voici un formulaire simple :</p>
+
+            <div class="code-example">
+                <p>&lt;form action="traiter.php" method="POST"&gt;</p>
+                <p>&lt;label for="nom"&gt;Nom:&lt;/label&gt;</p>
+                <p>&lt;input type="text" id="nom" name="nom"&gt;</p>
+                <p>&lt;label for="email"&gt;Email:&lt;/label&gt;</p>
+                <p>&lt;input type="email" id="email" name="email"&gt;</p>
+                <p>&lt;button type="submit"&gt;Envoyer&lt;/button&gt;</p>
+                <p>&lt;/form&gt;</p>
+            </div>
+
+            <p>Ce formulaire contient des champs pour le nom et l'email, ainsi qu'un bouton pour soumettre les données.</p>
+        </section>
+
+        <!-- Tables -->
+        <section id="tables">
+            <h2>Créer une Table</h2>
+            <p>Les tableaux sont utilisés pour organiser des informations sous forme de grille. Voici un exemple :</p>
+
+            <div class="code-example">
+                <p>&lt;table&gt;</p>
+                <p>&lt;tr&gt;</p>
+                <p>&lt;th&gt;Nom&lt;/th&gt;</p>
+                <p>&lt;th&gt;Âge&lt;/th&gt;</p>
+                <p>&lt;/tr&gt;</p>
+                <p>&lt;tr&gt;</p>
+                <p>&lt;td&gt;Jean&lt;/td&gt;</p>
+                <p>&lt;td&gt;28&lt;/td&gt;</p>
+                <p>&lt;/tr&gt;</p>
+                <p>&lt;/table&gt;</p>
+            </div>
+
+            <p>Le tableau contient deux colonnes : "Nom" et "Âge", avec une ligne de données.</p>
+        </section>
+
+        <!-- Liens -->
+        <section id="links">
+            <h2>Ajouter un Lien</h2>
+            <p>Les liens permettent de naviguer entre les pages ou vers des ressources externes. Voici un exemple de lien :</p>
+
+            <div class="code-example">
+                <p>&lt;a href="https://www.example.com"&gt;Visitez notre site&lt;/a&gt;</p>
+            </div>
+
+            <p><a href="https://www.example.com" target="_blank">Visitez notre site</a></p>
+        </section>
+
+        <!-- Vidéo -->
+        <section id="video">
+            <h2>Ajouter une Vidéo</h2>
+            <p>Les vidéos peuvent être intégrées à votre page avec la balise <code>&lt;video&gt;</code>. Voici un exemple :</p>
+
+            <div class="code-example">
+                <p>&lt;video width="600" controls&gt;</p>
+                <p>&lt;source src="video.mp4" type="video/mp4"&gt;</p>
+                <p>&lt;/video&gt;</p>
+            </div>
+
+            <p>Voici une vidéo intégrée :</p>
+            <div class="example-box">
+                <video width="600" controls>
+                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <h2>Footer</h2>
+            <p>Le pied de page (footer) est souvent utilisé pour des informations légales ou des liens supplémentaires. Voici un exemple simple :</p>
+
+            <div class="code-example">
+                <p>&lt;footer&gt;</p>
+                <p>&lt;p&gt;© 2025 Mon Site Web - Tous droits réservés&lt;/p&gt;</p>
+                <p>&lt;/footer&gt;</p>
+            </div>
+
+            <p>Le pied de page (footer) contient des informations légales.</p>
+        </section>
+
+        <!-- Boutons Interactifs -->
+        <section id="buttons">
+            <h2>Ajouter des Boutons Interactifs</h2>
+            <p>Les boutons permettent aux utilisateurs d'interagir avec votre site. Voici un exemple de bouton :</p>
+
+            <div class="code-example">
+                <p>&lt;button class="interactive-button"&gt;Cliquez-moi&lt;/button&gt;</p>
+            </div>
+
+            <button class="interactive-button" onclick="alert('Vous avez cliqué sur le bouton !')">Cliquez-moi</button>
+        </section>
+
+        <!-- Menus Déroulants -->
+        <section id="dropdown">
+            <h2>Ajouter un Menu Déroulant</h2>
+            <p>Un menu déroulant peut être utile pour afficher des options supplémentaires sans encombrer la page. Voici un exemple :</p>
+
+            <div class="code-example">
+                <p>&lt;div class="menu-dropdown"&gt;</p>
+                <p>&lt;button&gt;Menu&lt;/button&gt;</p>
+                <p>&lt;div class="dropdown-content"&gt;</p>
+                <p>&lt;a href="#"&gt;Option 1&lt;/a&gt;</p>
+                <p>&lt;a href="#"&gt;Option 2&lt;/a&gt;</p>
+                <p>&lt;/div&gt;</p>
+                <p>&lt;/div&gt;</p>
+            </div>
+
+            <div class="menu-dropdown">
+                <button>Menu</button>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Icônes -->
+        <section id="icons">
+            <h2>Ajouter des Icônes</h2>
+            <p>Les icônes peuvent être ajoutées pour améliorer l'interface utilisateur. Voici un exemple en utilisant Font Awesome :</p>
+            <p><i class="fas fa-home" style="font-size: 30px;"></i> Accueil</p>
+            <p>Pour utiliser Font Awesome, vous devez inclure un lien vers leur bibliothèque CSS dans la section <code>&lt;head&gt;</code>.</p>
+            <p>Exemple d'intégration : </p>
+            <div class="code-example">
+                <p>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"&gt;</p>
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <section id="javascript">
+            <h2>JavaScript Interactif</h2>
+            <p>JavaScript permet de rendre votre site interactif. Voici un exemple simple pour changer le texte d'un bouton lorsqu'il est cliqué :</p>
+
+            <div class="code-example">
+                <p>&lt;button onclick="changerTexte()"&gt;Cliquez pour changer le texte&lt;/button&gt;</p>
+                <p>&lt;script&gt;</p>
+                <p>function changerTexte() {</p>
+                <p>&nbsp;&nbsp;document.querySelector('button').innerText = 'Vous avez cliqué !';</p>
+                <p>&lt;/script&gt;</p>
+            </div>
+
+            <button onclick="changerTexte()">Cliquez pour changer le texte</button>
+
+            <script>
+                function changerTexte() {
+                    document.querySelector('button').innerText = 'Vous avez cliqué !';
+                }
+            </script>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2025 BuildInHtml - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>
